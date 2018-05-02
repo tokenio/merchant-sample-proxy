@@ -30,6 +30,8 @@ This starts up a server.
 
 The server shows a web page at `localhost:3000`. The page has a checkout button.
 Click the button to start the merchant checkout experience. You may need to download
-the Token app to link a test bank first. The server will create a token request,
-redirect the user to a login page to approve the payment, wait for a callback, and
-create a transfer by redeeming the received token.
+the Token app to link a test bank first. The server will:
+1. Create a token request.
+2. Redirect the user to a login page to approve the payment.
+3. Wait for a callback that contains a token id.
+4. Create a transfer by redeeming the received token.
