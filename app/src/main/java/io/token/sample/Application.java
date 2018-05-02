@@ -89,7 +89,7 @@ public class Application {
      */
     private static Map<String, String> parseFormData(String query) {
         try {
-            Map<String, String> queryPairs = new LinkedHashMap<String, String>();
+            Map<String, String> queryPairs = new LinkedHashMap<>();
             String[] pairs = query.split("&");
             for (String pair : pairs) {
                 int idx = pair.indexOf("=");
