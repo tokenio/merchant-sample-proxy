@@ -6,7 +6,6 @@ import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 import io.token.proto.ProtoJson;
 import io.token.proto.common.account.AccountProtos.BankAccount;
-import io.token.proto.common.account.AccountProtos.BankAccount.Sepa;
 import io.token.proto.common.token.TokenProtos.Token;
 import io.token.proto.common.transfer.TransferProtos.Transfer;
 
@@ -30,10 +29,9 @@ public class TokenService {
 
     public TokenService() {
         config = ConfigFactory.load();
-        destination = BankAccount.newBuilder()
-                .setSepa(Sepa.newBuilder()
-                        .setIban(config.getString("destination_iban")))
-                .build();
+        destination = ProtoJson.fromJson(
+                config.getString("destination"),
+                BankAccount.newBuilder());
     }
 
     public Token getToken(String tokenId) {
