@@ -7,20 +7,22 @@ flow enables merchants to request payments from users at any Token-connected ban
 The Token Merchant Proxy is a wrapper server around
 the [Java SDK](https://github.com/tokenio/sdk-java) using a simple HTTP API.
 
+### Dependency
 The sample requires the proxy as a dependency. Make sure it is configured properly. Refer
 to this [page](https://github.com/tokenio/merchant-proxy) for more details about its usages.
 
 To start the proxy:
 
-`cd .../merchant-proxy`
+`cd merchant-proxy`
 
 `./gradlew build run`
 
+### Usage
 To build this sample, you need Java Development Kit (JDK) version 8 or later.
 
 To build:
  
- `./gradlew shadowJar`.
+ `./gradlew clean shadowJar`.
 
 To run:
  
