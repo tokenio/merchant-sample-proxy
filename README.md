@@ -22,7 +22,7 @@ To build this sample, you need Java Development Kit (JDK) version 8 or later.
 
 To build:
  
- `./gradlew clean shadowJar`.
+ `./gradlew shadowJar`.
 
 To run:
  
