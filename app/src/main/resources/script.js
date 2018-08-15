@@ -11,7 +11,7 @@ function initiatePayment() {
 
     var data = $.param({
         amount: 4.99,
-        currency: 'EUR',
+        currency: 'GBP',
         description: 'Book Purchase'
     });
 
