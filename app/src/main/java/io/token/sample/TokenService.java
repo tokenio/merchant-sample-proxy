@@ -55,7 +55,7 @@ public class TokenService {
                 ProtoJson.toJson(destination),
                 config.getString("callback_url"));
 
-        return HttpClient.sendPost(toURL(BASE_URL, "/token-requests"), params)
+        return HttpClient.sendPost(toURL(BASE_URL, "/transfer-token-requests"), params)
                 .getAsJsonObject()
                 .get("tokenRequestId")
                 .getAsString();
